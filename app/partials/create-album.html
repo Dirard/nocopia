@@ -1,0 +1,59 @@
+﻿<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">Создать альбом</h4>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Сообщество</h3>
+        {{ group.name }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Название</h3>
+        <input type="text" ng-model="title">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Описание</h3>
+        <input type="text" ng-model="description">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Кто может просматривать этот альбом?</h3>
+        <select ng-model="privacy">
+          <option value="1">Только друзья</option>
+          <option value="2">Друзья и друзья друзей</option>
+          <option value="0">Все пользователи</option>
+          <option value="3">Только я</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Кто может комментировать фотографии?</h3>
+        <select ng-model="comment_privacy">
+          <option value="1">Только друзья</option>
+          <option value="2">Друзья и друзья друзей</option>
+          <option value="0">Все пользователи</option>
+          <option value="3">Только я</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$dismiss()">Отмена</button>
+    <button type="button" class="btn btn-primary" ng-click="createAlbum()">
+      <span ng-show="!creating">Создать</span>
+      <img src="img/loading.gif" ng-show="creating" />
+    </button>
+  </div>
+</div><!-- /.modal-content -->

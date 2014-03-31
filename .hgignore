@@ -1,0 +1,6 @@
+\.swp$
+\.swo$
+\.orig$
+public/[^/]+\.jpg$
+public/[^/]+\.png$
+public/[^/]+\.png$
